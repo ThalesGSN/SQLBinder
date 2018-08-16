@@ -22,7 +22,7 @@ public class QueryReader {
         InputStream input = QueryReader.class.getResourceAsStream("/resources/" + queryPath);
         
         if (input == null) {
-            input = QueryReader.class.getClassLoader().getResourceAsStream( queryPath);
+            input = QueryReader.class.getClassLoader().getResourceAsStream(queryPath);
         }
         
         if(input == null) {

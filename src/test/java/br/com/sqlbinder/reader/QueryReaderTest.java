@@ -34,8 +34,9 @@ public class QueryReaderTest {
 	@Test
 	public void readQueryFromTestSucesso() throws FileNotFoundException, QueryReadException {
 		String queryPath = "test.sql";
-		String query = QueryReader.readQueryFrom(queryPath);
-		assertEquals("select * from Test", query);
+		String actual = QueryReader.readQueryFrom(queryPath);
+		String expected = "SELECT * FROM TBL_TEST";
+		assertEquals(expected, actual);
 		
 	}
 	
